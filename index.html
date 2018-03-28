@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+	<meta name="identifier-url" content="https://iangoodnight.github.io/PARS/" />
+	<meta name="title" content="PARS" />
+	<meta name="description" content="A par list generator for lunch service at the Astoria Market &amp; Cafe." />
+	<meta name="abstract" content="A par list generator for lunch service at the Astoria Market &amp; Cafe." />
+	<meta name="keywords" content="Pars, Astoria, Cafe, Market, Lunch" />
+	<meta name="author" content="Ian Goodnight" />
+	<meta name="revisit-after" content="15" />
+	<meta name="language" content="EN" />
+	<meta name="copyright" content="© 2018 Ian Goodnight" />
+	<meta name="robots" content="All" />
+	
+	<!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+	<title>PARS</title>
+	
+</head>
+<body>
+	<div class="container">
+		<div class="container valign-wrapper center-align">
+			<div class="row">
+				<div class="container-fluid">
+					<h4>Pizza Station</h2>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<form class="col s12">
+      		<div class="row">
+						<div class="input-field col s4">
+          		<input placeholder="Item" id="item" type="text" class="validate">
+          		<label for="item">Item</label>
+        		</div>
+        		<div class="input-field col s4">
+          		<input placeholder="Par" id="open" type="text" class="validate">
+          		<label for="open">Open</label>
+        		</div>
+						<div class="input-field col s3">
+          		<input placeholder="Par" id="mid" type="text" class="validate">
+          		<label for="mid">Shift Change</label>
+        		</div>
+        		<div class="col s1">
+        			<button id="submit" class="btn-floating btn-large waves-effect waves-light red" type="submit" name="action"><i class="material-icons">add</i></button>
+        		</div>
+        	</div>
+        </form>
+			</div>
+		</div>
+		<div class="container-fluid print-wrap page1">
+			<div class="row">
+				<table id="par-list" class="col s12">
+					<thead>
+						<tr>
+							<th class="col s4">Item</th>
+							<th class="col s4">Open Par</th>
+							<th class="col s4">Shift Change Par</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- Render Table Here -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+<!-- 		<div class="container">
+			<div class="row">
+				<div class="col s12"> -->
+					<!--Generated PDF will load in iFrame when we click on link below-->
+<!-- 					<iframe frameBorder="0" id="sample-pdf" style="right: 0; top: 53px; bottom: 0; height: 400px; width: 100%"></iframe>					
+				</div>				
+			</div>
+			<div class="row">
+				<div class="col s6"> -->
+					<!--Download PDF Link-->
+<!-- 					<a id="pdf-download-link" title="Download PDF File">Download PDF file</a>
+				</div>
+				<div class="col s6"> -->
+					<!--Create iFrame URL-->
+<!-- 					<a id="pdf-showiFrame-link" title="Show PDF in iFrame">Show PDF in iFrame</a>
+				</div>		
+			</div>
+		</div> -->
+	</div>
+
+	<!-- Link to local Javascript -->
+	<script type="text/javascript" src="assets/app.js"></script>
+</body>
+</html>
